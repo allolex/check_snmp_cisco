@@ -76,6 +76,7 @@ only every 2 days instead of every run
 
 
 Authors
+-------
 
   - R3dL!GhT (original source)
   - Martin Fuerstenau <mf@maerber.de> (modifications)
