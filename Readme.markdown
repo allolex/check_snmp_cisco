@@ -14,6 +14,29 @@ Synopsis
   `check_cisco_snmp -H ip -C community -I interface [-S state]`
 
 
+Description
+-----------
+
+  This Nagios plugin will use SNMP to find out information about Cisco
+  devices.
+
+  State option are: 
+    - up (-S up)
+    - down (-S down)
+    - dormant (-S dormant)
+
+  State defaults to "up".
+
+
+Dependencies
+------------
+
+  This plugin uses the CPAN modules Net::SNMP and Storable.
+
+  Nagios isn't strictly required by this plugin; it can work as a stand-alone
+  script.
+
+
 What's New
 ----------
 
@@ -22,6 +45,26 @@ What's New
   - Optimised interface lookup
   - Changed usage and help messages to heredocs
   - Made help argument return help
+
+
+Examples
+--------
+
+  1. To check whether Fa2/0/1 is up on your switch:
+
+    `check_cisco_snmp -H 192.168.0.1 -C public -I Fa2/0/1`
+
+    or
+
+    `check_cisco_snmp -H 192.168.0.1 -C public -I FastEthernet2/0/1`
+
+  2. To check whether FastEthernet0 is down on your router:
+
+    `check_cisco_snmp -H 192.168.0.1 -C MyCommunity -I FastEthernet0 -S down`
+
+  3. To check whether Backup RNIS BRIO:1 is dormant on your router:
+
+    `check_cisco_snmp -H 192.168.0.1 -C MyCommunity -I BRI0:1 -S down`
 
 
 Original Description by Martin
