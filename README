@@ -20,7 +20,7 @@ What's New
   - Made help argument return help
 
 
-Original Description
+Original Description by Martin
 
 
 http://exchange.nagios.org/directory/Plugins/Hardware/Network-Gear/Cisco/check_snmp_cisco/details
@@ -70,6 +70,9 @@ old (-mtime) or not existent it will be generated. OIDs, interface names and
 descriptions are store in the cache That means the double walk will be done
 only every 2 days instead of every run
 
-Synopsis:
 
-check_cisco_snmp -H ip -C community -I interface -S state (optional)
+Authors
+
+  - R3dL!GhT (original source)
+  - Martin Fuerstenau <mf@maerber.de> (modifications)
+  - Damon Davison <damon@allolex.net> (modifications)
